@@ -1,4 +1,4 @@
-# [https://www.siam-is18.dm.unibo.it/minitutorials Automated 3D reconstruction from satellite images]
+# SIAM IS18 Mini-tutorial ["Automated 3D reconstruction from satellite images"](https://www.siam-is18.dm.unibo.it/minitutorials)
 
 
 ### Abstract
@@ -16,21 +16,26 @@
 
 ## Docker image running on http://localhost:8000
 
-You can run the server locally using Docker.
-We tested this on Linux and MacOS systems.
+You can run the server locally using a Docker image.
+We tested it on Linux and MacOS systems.
 
-First create the shared home directory in the host computer:
+https://hub.docker.com/r/facciolo/is18-satellite-minitutorial/
 
-    mkdir ~/IS18tutorial
+
+### To launch the docker image:
+
+1. First create the shared home directory in the host computer:
+
+    mkdir ~/is18tutorial
     # makes writable by the docker use
-    chmod o+rwx ~/IS18tutorial
+    chmod o+rwx ~/is18tutorial
 
-Then run the docker instance by calling (automatically downloads it):
+2. Then launch the docker instance by calling (automatically downloads it):
 
     # Type ctrl-D to exit the container
     docker run --rm  \
-        -v ~/IS18tutorial:/home/student1  \
-        -p 8000:8000  --workdir /home/student  -t -i  facciolo/IS18-satellite-minitutorial  \
+        -v ~/is18tutorial:/home/student1  \
+        -p 8000:8000  --workdir /home/student  -t -i  facciolo/is18-satellite-minitutorial  \
         jupyter notebook --port=8000 --ip=* --allow-root --NotebookApp.token=''
 
-Connect to:    http://localhost:8000
+3. Connect to:    http://localhost:8000
