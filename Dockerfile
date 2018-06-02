@@ -113,5 +113,5 @@ EXPOSE 8000:8000
 #USER student1
 #
 #CMD ["jupyterhub-singleuser"]
-CMD ["jupyter notebook --port=8000 --ip=* --allow-root --NotebookApp.token=''"]
+CMD jupyter notebook --port=8000 --ip=* --allow-root --NotebookApp.token=''
 
