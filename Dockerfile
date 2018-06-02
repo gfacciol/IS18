@@ -50,7 +50,6 @@ RUN pip3 install matplotlib scipy \
                  opencv-contrib-python \
                  ad
 
-
 # create user accounts
 #RUN useradd -m -p $(openssl passwd -1 ed188d37503aa2fe3cd65bc51516c41a) carlo
 RUN useradd -m -p $(openssl passwd -1 password) student1
