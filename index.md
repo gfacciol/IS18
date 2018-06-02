@@ -21,23 +21,23 @@ This tutorial is a hands-on introduction to the manipulation of optical satellit
 You can run the server locally using a Docker image.
 We tested it on Linux and MacOS systems.
 
-https://hub.docker.com/r/facciolo/is18-satellite-minitutorial/
+       https://hub.docker.com/r/facciolo/is18-satellite-minitutorial/
 
 
 ### To launch the docker image:
 
 1. First create the shared home directory in the host computer:
 
-    mkdir ~/is18tutorial
-    # makes writable by the docker use
-    chmod o+rwx ~/is18tutorial
+       mkdir ~/is18tutorial
+       # makes writable by the docker use
+       chmod o+rwx ~/is18tutorial
 
 2. Then launch the docker instance by calling (automatically downloads it):
 
-    # Type ctrl-D to exit the container
-    docker run --rm  \
-        -v ~/is18tutorial:/home/student1  \
-        -p 8000:8000  --workdir /home/student  -t -i  facciolo/is18-satellite-minitutorial  \
-        jupyter notebook --port=8000 --ip=* --allow-root --NotebookApp.token=''
+       # Type ctrl-D to exit the container
+       docker run --rm  \
+           -v ~/is18tutorial:/home/student1  \
+           -p 8000:8000  --workdir /home/student  -t -i  facciolo/is18-satellite-minitutorial  \
+           jupyter notebook --port=8000 --ip=* --allow-root --NotebookApp.token=''
 
 3. Connect to:    http://localhost:8000
