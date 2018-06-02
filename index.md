@@ -1,4 +1,4 @@
-# ["Automated 3D reconstruction from satellite images"](https://www.siam-is18.dm.unibo.it/minitutorials)
+# [Automated 3D reconstruction from satellite images](https://www.siam-is18.dm.unibo.it/minitutorials)
 ### SIAM IS18 Mini-tutorial 
 
 
