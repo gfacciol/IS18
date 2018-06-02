@@ -2,10 +2,10 @@
 ### SIAM IS18 Mini-tutorial 
 
 
-<img src="docs/step1.png"  height="120">
-<img src="docs/step2.png"  height="120">
-<img src="docs/step3.png"  height="120">
-<img src="docs/step4.png"  height="120">
+<img src="docs/step1.png"  height="130">
+<img src="docs/step2.png"  height="130">
+<img src="docs/step3.png"  height="130">
+<img src="docs/step4.png"  height="130">
 
 
 
