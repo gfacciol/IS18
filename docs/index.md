@@ -1,4 +1,4 @@
-# Automated 3D reconstruction from satellite images
+# [https://www.siam-is18.dm.unibo.it/minitutorials Automated 3D reconstruction from satellite images]
 
 
 ### Abstract
@@ -13,6 +13,24 @@
 * <a href="https://avocat.ovh.hw.ipol.im:8000/">server 2</a>
 
 
-## Docker image
 
+## Docker image running on http://localhost:8000
 
+You can run the server locally using Docker.
+We tested this on Linux and MacOS systems.
+
+First create the shared home directory in the host computer:
+
+    mkdir ~/IS18tutorial
+    # makes writable by the docker use
+    chmod o+rwx ~/IS18tutorial
+
+Then run the docker instance by calling (automatically downloads it):
+
+    # Type ctrl-D to exit the container
+    docker run --rm  \
+        -v ~/IS18tutorial:/home/student1  \
+        -p 8000:8000  --workdir /home/student  -t -i  facciolo/IS18-satellite-minitutorial  \
+        jupyter notebook --port=8000 --ip=* --allow-root --NotebookApp.token=''
+
+Connect to:    http://localhost:8000
