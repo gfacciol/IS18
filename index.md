@@ -2,6 +2,12 @@
 ### SIAM IS18 Mini-tutorial 
 
 
+<img src="docs/step1.png"  height="120">
+<img src="docs/step2.png"  height="120">
+<img src="docs/step3.png"  height="120">
+<img src="docs/step4.png"  height="120">
+
+
 
 ### Abstract
 
@@ -12,8 +18,8 @@ This tutorial is a hands-on introduction to the manipulation of optical satellit
 
 ### LIVE servers (08/06/2018)
 
-* <a href="https://menthe.ovh.hw.ipol.im:8000/">server 1</a>
-* <a href="https://avocat.ovh.hw.ipol.im:8000/">server 2</a>
+* <a href="http://menthe.ovh.hw.ipol.im:8000/">server 1</a>
+* <a href="http://avocat.ovh.hw.ipol.im:8000/">server 2</a>
 
 
 
