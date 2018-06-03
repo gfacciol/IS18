@@ -43,8 +43,9 @@ We tested it on Linux and MacOS systems.
 
        # Type ctrl-D to exit the container
        docker run --rm \
-           ~/is18tutorial:/home/student1/IS18  \
+           -v ~/is18tutorial:/home/student1/IS18  \
            -p 8000:8000 -p 8001:8001 \
            -t -i  facciolo/is18-satellite-minitutorial 
 
 3. Connect to:    http://localhost:8000
+   
