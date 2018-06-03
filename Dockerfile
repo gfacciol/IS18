@@ -105,13 +105,19 @@ RUN cd /home/student1 && make
 #    pandoc \
 #    texlive-xetex 
 
+# hack
+RUN npm install -g http-server
 
 # create a user, since we don't want to run as root
 ENV HOME=/home/student1
 WORKDIR $HOME
 EXPOSE 8000:8000
+EXPOSE 8001:8001
 #USER student1
 #
 #CMD ["jupyterhub-singleuser"]
-CMD jupyter notebook --port=8000 --ip=* --allow-root --NotebookApp.token=''
+#CMD jupyter notebook --port=8000 --ip=* --allow-root --NotebookApp.token=''
+# runs jupyter on 8000 and http-server on 8001
+COPY initscript.sh initscript.sh
+CMD ./initscript.sh
 

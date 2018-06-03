@@ -42,9 +42,9 @@ We tested it on Linux and MacOS systems.
 2. Then launch the docker instance by calling (automatically downloads it):
 
        # Type ctrl-D to exit the container
-       docker run --rm  \
-           -v ~/is18tutorial:/home/student1  \
-           -p 8000:8000  --workdir /home/student  -t -i  facciolo/is18-satellite-minitutorial  \
-           jupyter notebook --port=8000 --ip=* --allow-root --NotebookApp.token=''
+       docker run --rm \
+           ~/is18tutorial:/home/student1/IS18  \
+           -p 8000:8000 -p 8001:8001 \
+           -t -i  facciolo/is18-satellite-minitutorial 
 
 3. Connect to:    http://localhost:8000
