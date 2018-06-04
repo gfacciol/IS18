@@ -28,7 +28,7 @@ This tutorial is a hands-on introduction to the manipulation of optical satellit
 You can run the server locally using a Docker image.
 We tested it on Linux and MacOS systems.
 
-       https://hub.docker.com/r/facciolo/is18-satellite-minitutorial/
+* [https://hub.docker.com/r/facciolo/is18-satellite-minitutorial/](https://hub.docker.com/r/facciolo/is18-satellite-minitutorial/)
 
 
 ### To launch the docker image:
