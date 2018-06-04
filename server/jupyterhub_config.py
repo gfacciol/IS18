@@ -24,7 +24,7 @@ c.DockerSpawner.environment = {
     'EXTERNAL_HTTP_SRV_URL': 'http://avocat.ovh.hw.ipol.im:8008',
 }
 c.DockerSpawner.volumes = {
-    '/home/facciolo/IS18/shared': '/shared'
+    '/home/facciolo/IS18/docker_servers/shared': '/shared'
 }
 
 
