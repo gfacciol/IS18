@@ -23,8 +23,11 @@ This tutorial is a hands-on introduction to the manipulation of optical satellit
 
 
 
-## Docker image running on http://localhost:8000
+## Docker image running on http://localhost:8000 (available soon)
 
+** requires a good internet connection to access the satellite images ** 
+
+<!-- 
 You can run the server locally using a Docker image.
 We tested it on Linux and MacOS systems.
 
@@ -50,4 +53,4 @@ We tested it on Linux and MacOS systems.
            bash /singleuser_initscript.sh
 
 3. Connect to:    http://localhost:8000
-   
+-->   
