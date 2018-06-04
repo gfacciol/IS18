@@ -16,8 +16,8 @@ c.JupyterHub.authenticator_class = 'tmpauthenticator.TmpAuthenticator'
 c.JupyterHub.spawner_class = 'dockerspawner.DockerSpawner'
 c.Spawner.mem_limit = '2G'
 c.Spawner.cpu_limit = 8.0
-c.DockerSpawner.image = "is18dock"
-#c.DockerSpawner.host_ip = "0.0.0.0"
+c.DockerSpawner.image = "facciolo/is18-satellite-minitutorial"
+c.DockerSpawner.host_ip = "0.0.0.0"
 
 # this variable indicates the external URL of the web server used for serving the point clouds
 c.DockerSpawner.environment = {
@@ -26,6 +26,7 @@ c.DockerSpawner.environment = {
 c.DockerSpawner.volumes = {
     '/home/facciolo/IS18/shared': '/shared'
 }
+
 
 c.Spawner.args = ['--NotebookApp.allow_origin=*']
 
