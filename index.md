@@ -43,9 +43,11 @@ We tested it on Linux and MacOS systems.
 
        # Type ctrl-D to exit the container
        docker run --rm \
-           -v ~/is18tutorial:/home/student1/IS18  \
-           -p 8000:8000 -p 8001:8001 \
-           -t -i  facciolo/is18-satellite-minitutorial 
+           -v ~/is18tutorial:/home/student1/IS18 \
+           -p 8000:8000 -p 8008:8008  \
+           --env EXTERNAL_HTTP_SRV_URL=http://localhost:8008 \
+           -t -i  facciolo/is18-satellite-minitutorial \
+           bash /singleuser_initscript.sh
 
 3. Connect to:    http://localhost:8000
    
