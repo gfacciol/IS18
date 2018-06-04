@@ -120,5 +120,5 @@ USER student1
 CMD ["jupyterhub-singleuser"]
 #CMD jupyter notebook --port=8000 --ip=* --allow-root --NotebookApp.token=''
 # runs jupyter on 8000 and http-server on 8008
-CMD /singleuser_initscript.sh
+# CMD /singleuser_initscript.sh
 
