@@ -27,7 +27,7 @@ This tutorial is a hands-on introduction to the manipulation of optical satellit
 
 ## Docker image running on http://localhost:8000 (available soon)
 
-** requires a good internet connection to access the satellite images ** 
+**requires a good internet connection to access the satellite images** 
 
 <!-- 
 You can run the server locally using a Docker image.
