@@ -20,6 +20,8 @@ This tutorial is a hands-on introduction to the manipulation of optical satellit
 
 * <a href="http://menthe.ovh.hw.ipol.im:8000/">server 1</a>
 * <a href="http://avocat.ovh.hw.ipol.im:8000/">server 2</a>
+* <a href="http://piadina.ovh.hw.ipol.im:8000/">server 2</a>
+* <a href="http://tigella.ovh.hw.ipol.im:8000/">server 2</a>
 
 
 
