@@ -1,3 +1,4 @@
+
 # [Automated 3D reconstruction from satellite images](https://www.siam-is18.dm.unibo.it/minitutorials)
 ### SIAM IS18 Mini-tutorial 
 
@@ -18,12 +19,10 @@ This tutorial is a hands-on introduction to the manipulation of optical satellit
 
 ### LIVE servers (08/06/2018)
 
-* <a href="http://menthe.ovh.hw.ipol.im:8000/">server 1</a>
-* <a href="http://avocat.ovh.hw.ipol.im:8000/">server 2</a>
-* <a href="http://piadina.ovh.hw.ipol.im:8000/">server 3</a>
-
-
-<!-- <a href="http://tigella.ovh.hw.ipol.im:8000/">server 4</a> -->
+* <a href="http://menthe.ovh.hw.ipol.im:8080/">server 1</a>
+* <a href="http://avocat.ovh.hw.ipol.im:8080/">server 2</a>
+* <a href="http://piadina.ovh.hw.ipol.im:8080/">server 3</a>
+* <a href="http://tigella.ovh.hw.ipol.im:8080/">server 4</a>
 
 
 
