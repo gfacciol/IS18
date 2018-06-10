@@ -1,6 +1,6 @@
 
 # [Automated 3D reconstruction from satellite images](https://www.siam-is18.dm.unibo.it/minitutorials)
-### SIAM IS18 Mini-tutorial 
+### SIAM IS18 Mini-tutorial - 08/06/2018
 
 
 <img src="docs/step1_150.png" >
@@ -24,11 +24,30 @@ This tutorial is a hands-on introduction to the manipulation of optical satellit
 * <a href="http://piadina.ovh.hw.ipol.im:8080/">server 3</a>
 * <a href="http://tigella.ovh.hw.ipol.im:8080/">server 4</a>
 
+* [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/gfacciol/IS18notebook/master?filepath=IS18.ipynb)
+
+### Notebook sources
+
+https://github.com/gfacciol/IS18notebook
 
 
-## Docker image running on http://localhost:8000 (available soon)
+### Docker image running on http://localhost:8000
 
 **requires a good internet connection to access the satellite images** 
+
+
+1. Download and launch [the docker image](https://hub.docker.com/r/facciolo/is18notebook) with:
+
+       # Type ctrl-D to exit the container
+       docker run --rm \
+           -p 8000:8000 \
+           -t -i  facciolo/is18notebook \ 
+           jupyter notebook --port=8000 --ip=0.0.0.0 --NotebookApp.token=''
+
+2. Connect to:  http://localhost:8000
+
+
+
 
 <!-- 
 You can run the server locally using a Docker image.
