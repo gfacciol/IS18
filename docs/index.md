@@ -3,10 +3,10 @@
 ### Gabriele Facciolo, Carlo de Franchis, and Enric Meinhardt-Llopis
 
 
-<img src="docs/step1_150.png" >
-<img src="docs/step2_150.png" >
-<img src="docs/step3_150.png" >
-<img src="docs/step4_150.png" >
+<img src="step1_150.png" >
+<img src="step2_150.png" >
+<img src="step3_150.png" >
+<img src="step4_150.png" >
 
 
 ### Abstract
@@ -16,7 +16,7 @@ Commercial spaceborne imaging is experiencing an unprecedented growth both in si
 This tutorial is a hands-on introduction to the manipulation of optical satellite images, using complete examples with python code. The objective is to provide all the tools needed to process and exploit the images for 3D reconstruction. We will present the essential modeling elements needed for building a stereo pipeline for satellite images. This includes the specifics of satellite imaging such as pushbroom sensor modeling, coordinate systems, and localization functions. Then we will review the main concepts and algorithms for stereovision and tailor them to the case of satellite images. Finally, we will bring together these elements to build a 3D reconstruction pipeline for multi-date satellite images.
 
 
-* [Slides](docs/slidesIS18.pdf)
+* [Slides](slidesIS18.pdf)
 * [Notebook sources](https://github.com/gfacciol/IS18notebook)
 
 
