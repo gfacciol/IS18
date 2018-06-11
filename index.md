@@ -1,6 +1,5 @@
-
 # [Automated 3D reconstruction from satellite images](https://www.siam-is18.dm.unibo.it/minitutorials)
-### SIAM IS18 Mini-tutorial - 08/06/2018
+## SIAM IS18 Mini-tutorial - 08/06/2018
 
 
 <img src="docs/step1_150.png" >
@@ -20,12 +19,6 @@ This tutorial is a hands-on introduction to the manipulation of optical satellit
 * [Slides](docs/slidesIS18.pdf)
 * [Notebook sources](https://github.com/gfacciol/IS18notebook)
 
-### See also
-
-* [Satellite Stereo Pipeline (S2P)](https://github.com/MISS3D/s2p)
-* [Automatic 3D Reconstruction from Multi-Date Satellite Images (winning solution of the IARPA Multi-View Stereo 3D Mapping Challenge 2016)](https://gfacciol.github.io/multi-date-stereo/)
-* [Master2 MVA course: Large-scale geospatial data exploitation](https://mvaisat.wp.imt.fr/)
-
 
 ### LIVE servers running the notebook
 
@@ -35,6 +28,11 @@ This tutorial is a hands-on introduction to the manipulation of optical satellit
 * <a href="http://piadina.ovh.hw.ipol.im:8080/">server 3</a>
 * <a href="http://tigella.ovh.hw.ipol.im:8080/">server 4</a>
 
+### See also
+
+* Open source [Satellite Stereo Pipeline (S2P)](https://github.com/MISS3D/s2p)
+* [Automatic 3D Reconstruction from Multi-Date Satellite Images](https://gfacciol.github.io/multi-date-stereo/) (winning solution of the IARPA Multi-View Stereo 3D Mapping Challenge 2016)
+* Master2 MVA course: [Large-scale geospatial data exploitation](https://mvaisat.wp.imt.fr/)
 
 
 ### Run the notebook with a Docker image on http://localhost:8000
