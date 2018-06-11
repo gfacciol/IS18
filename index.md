@@ -17,21 +17,21 @@ Commercial spaceborne imaging is experiencing an unprecedented growth both in si
 This tutorial is a hands-on introduction to the manipulation of optical satellite images, using complete examples with python code. The objective is to provide all the tools needed to process and exploit the images for 3D reconstruction. We will present the essential modeling elements needed for building a stereo pipeline for satellite images. This includes the specifics of satellite imaging such as pushbroom sensor modeling, coordinate systems, and localization functions. Then we will review the main concepts and algorithms for stereovision and tailor them to the case of satellite images. Finally, we will bring together these elements to build a 3D reconstruction pipeline for multi-date satellite images.
 
 
-### LIVE servers (08/06/2018)
+* [Slides](docs/slidesIS18.pdf)
+* [Notebook sources](https://github.com/gfacciol/IS18notebook)
 
+
+### LIVE servers
+
+* [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/gfacciol/IS18notebook/master?filepath=IS18.ipynb)
 * <a href="http://menthe.ovh.hw.ipol.im:8080/">server 1</a>
 * <a href="http://avocat.ovh.hw.ipol.im:8080/">server 2</a>
 * <a href="http://piadina.ovh.hw.ipol.im:8080/">server 3</a>
 * <a href="http://tigella.ovh.hw.ipol.im:8080/">server 4</a>
 
-* [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/gfacciol/IS18notebook/master?filepath=IS18.ipynb)
-
-### Notebook sources
-
-https://github.com/gfacciol/IS18notebook
 
 
-### Docker image running on http://localhost:8000
+### Run Docker the image on http://localhost:8000
 
 **requires a good internet connection to access the satellite images** 
 
