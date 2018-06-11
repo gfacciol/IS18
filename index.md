@@ -20,8 +20,14 @@ This tutorial is a hands-on introduction to the manipulation of optical satellit
 * [Slides](docs/slidesIS18.pdf)
 * [Notebook sources](https://github.com/gfacciol/IS18notebook)
 
+### See also
 
-### LIVE servers
+* [Satellite Stereo Pipeline (S2P)](https://github.com/MISS3D/s2p)
+* [Automatic 3D Reconstruction from Multi-Date Satellite Images (winning solution of the IARPA Multi-View Stereo 3D Mapping Challenge 2016)](https://gfacciol.github.io/multi-date-stereo/)
+* [Master2 MVA course: Large-scale geospatial data exploitation](https://mvaisat.wp.imt.fr/)
+
+
+### LIVE servers running the notebook
 
 * [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/gfacciol/IS18notebook/master?filepath=IS18.ipynb)
 * <a href="http://menthe.ovh.hw.ipol.im:8080/">server 1</a>
@@ -31,7 +37,7 @@ This tutorial is a hands-on introduction to the manipulation of optical satellit
 
 
 
-### Run Docker the image on http://localhost:8000
+### Run the notebook with a Docker image on http://localhost:8000
 
 **requires a good internet connection to access the satellite images** 
 
