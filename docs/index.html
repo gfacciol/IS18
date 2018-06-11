@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Automated 3D reconstruction from satellite images | IS18</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="Automated 3D reconstruction from satellite images" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://gfacciol.github.io/IS18/" />
+<meta property="og:url" content="https://gfacciol.github.io/IS18/" />
+<meta property="og:site_name" content="IS18" />
+<script type="application/ld+json">
+{"name":"IS18","@type":"WebSite","url":"https://gfacciol.github.io/IS18/","headline":"Automated 3D reconstruction from satellite images","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/IS18/assets/css/style.css?v=8a22ae7af7d4346e445409c912e57112cdb30bb7">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+
+      <h1 id="automated-3d-reconstruction-from-satellite-images"><a href="https://www.siam-is18.dm.unibo.it/minitutorials">Automated 3D reconstruction from satellite images</a></h1>
+<h3 id="siam-is18-mini-tutorial---08062018">SIAM IS18 Mini-tutorial - 08/06/2018</h3>
+<h3 id="gabriele-facciolo-carlo-de-franchis-and-enric-meinhardt-llopis">Gabriele Facciolo, Carlo de Franchis, and Enric Meinhardt-Llopis</h3>
+
+<p><img src="step1_150.png" />
+<img src="step2_150.png" />
+<img src="step3_150.png" />
+<img src="step4_150.png" /></p>
+
+<h3 id="abstract">Abstract</h3>
+
+<p>Commercial spaceborne imaging is experiencing an unprecedented growth both in size of the constellations and resolution of the images. This is driven by applications ranging from geographic mapping to measuring glacier evolution, or rescue assistance for natural disasters. For all these applications it is critical to automatically extract and update elevation data from arbitrary collections of multi-date satellite images. This multi-date satellite stereo problem is a challenging application of 3D computer vision: images are taken at very different dates, from very different points of view, and under different lighting conditions. The case of urban scenes adds further difficulties because of occlusions and reflections.</p>
+
+<p>This tutorial is a hands-on introduction to the manipulation of optical satellite images, using complete examples with python code. The objective is to provide all the tools needed to process and exploit the images for 3D reconstruction. We will present the essential modeling elements needed for building a stereo pipeline for satellite images. This includes the specifics of satellite imaging such as pushbroom sensor modeling, coordinate systems, and localization functions. Then we will review the main concepts and algorithms for stereovision and tailor them to the case of satellite images. Finally, we will bring together these elements to build a 3D reconstruction pipeline for multi-date satellite images.</p>
+
+<ul>
+  <li><a href="/IS18/slidesIS18.pdf">Slides</a></li>
+  <li><a href="https://github.com/gfacciol/IS18">Notebook sources</a></li>
+</ul>
+
+<h3 id="live-servers-running-the-notebook">LIVE servers running the notebook</h3>
+
+<ul>
+  <li><a href="https://mybinder.org/v2/gh/gfacciol/IS18/master?filepath=IS18.ipynb"><img src="https://mybinder.org/badge.svg" alt="Binder" /></a></li>
+  <li><a href="http://menthe.ovh.hw.ipol.im:8080/">server 1</a></li>
+  <li><a href="http://avocat.ovh.hw.ipol.im:8080/">server 2</a></li>
+  <li><a href="http://piadina.ovh.hw.ipol.im:8080/">server 3</a></li>
+  <li><a href="http://tigella.ovh.hw.ipol.im:8080/">server 4</a></li>
+</ul>
+
+<h3 id="see-also">See also</h3>
+
+<ul>
+  <li>Open source <a href="https://github.com/MISS3D/s2p">Satellite Stereo Pipeline (S2P)</a></li>
+  <li><a href="https://gfacciol.github.io/multi-date-stereo/">Automatic 3D Reconstruction from Multi-Date Satellite Images</a> (winning solution of the <a href="https://www.iarpa.gov/challenges/3dchallenge.html#winners">IARPA Multi-View Stereo 3D Mapping Challenge 2016</a>)</li>
+  <li>Master2 MVA course: <a href="https://mvaisat.wp.imt.fr/">Large-scale geospatial data exploitation</a></li>
+</ul>
+
+<h3 id="run-the-notebook-with-a-docker-image-on-httplocalhost8000">Run the notebook with a Docker image on http://localhost:8000</h3>
+
+<p><strong>requires a good internet connection to access the satellite images</strong></p>
+
+<ol>
+  <li>
+    <p>Download and launch <a href="https://hub.docker.com/r/facciolo/is18">the docker image</a> with:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Type ctrl-D to exit the container
+docker run --rm \
+    -p 8000:8000 \
+    -t -i  facciolo/is18 \ 
+    jupyter notebook --port=8000 --ip=0.0.0.0 --NotebookApp.token=''
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Connect to:  http://localhost:8000</p>
+  </li>
+</ol>
+
+<!-- 
+You can run the server locally using a Docker image.
+We tested it on Linux and MacOS systems.
+
+* [https://hub.docker.com/r/facciolo/is18-satellite-minitutorial/](https://hub.docker.com/r/facciolo/is18-satellite-minitutorial/)
+
+
+### To launch the docker image:
+
+1. First create the shared home directory in the host computer:
+
+       mkdir ~/is18tutorial
+       # makes writable by the docker use
+       chmod o+rwx ~/is18tutorial
+
+2. Then launch the docker instance by calling (automatically downloads it):
+
+       # Type ctrl-D to exit the container
+       docker run --rm \
+           -v ~/is18tutorial:/home/student1/IS18 \
+           -p 8000:8000 -p 8008:8008  \
+           --env EXTERNAL_HTTP_SRV_URL=http://localhost:8008 \
+           -t -i  facciolo/is18-satellite-minitutorial \
+           bash /singleuser_initscript.sh
+
+3. Connect to:    http://localhost:8000
+-->
+
+
+      
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>
+
