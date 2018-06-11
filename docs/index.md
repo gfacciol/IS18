@@ -17,12 +17,12 @@ This tutorial is a hands-on introduction to the manipulation of optical satellit
 
 
 * [Slides](slidesIS18.pdf)
-* [Notebook sources](https://github.com/gfacciol/IS18notebook)
+* [Notebook sources](https://github.com/gfacciol/IS18)
 
 
 ### LIVE servers running the notebook
 
-* [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/gfacciol/IS18notebook/master?filepath=IS18.ipynb)
+* [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/gfacciol/IS18/master?filepath=IS18.ipynb)
 * <a href="http://menthe.ovh.hw.ipol.im:8080/">server 1</a>
 * <a href="http://avocat.ovh.hw.ipol.im:8080/">server 2</a>
 * <a href="http://piadina.ovh.hw.ipol.im:8080/">server 3</a>
@@ -40,12 +40,12 @@ This tutorial is a hands-on introduction to the manipulation of optical satellit
 **requires a good internet connection to access the satellite images** 
 
 
-1. Download and launch [the docker image](https://hub.docker.com/r/facciolo/is18notebook) with:
+1. Download and launch [the docker image](https://hub.docker.com/r/facciolo/is18) with:
 
        # Type ctrl-D to exit the container
        docker run --rm \
            -p 8000:8000 \
-           -t -i  facciolo/is18notebook \ 
+           -t -i  facciolo/is18 \ 
            jupyter notebook --port=8000 --ip=0.0.0.0 --NotebookApp.token=''
 
 2. Connect to:  http://localhost:8000
