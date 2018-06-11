@@ -1,12 +1,12 @@
 # [Automated 3D reconstruction from satellite images](https://www.siam-is18.dm.unibo.it/minitutorials)
-## SIAM IS18 Mini-tutorial - 08/06/2018
+### SIAM IS18 Mini-tutorial - 08/06/2018
+### Gabriele Facciolo, Carlo de Franchis, and Enric Meinhardt-Llopis
 
 
 <img src="docs/step1_150.png" >
 <img src="docs/step2_150.png" >
 <img src="docs/step3_150.png" >
 <img src="docs/step4_150.png" >
-
 
 
 ### Abstract
@@ -31,7 +31,7 @@ This tutorial is a hands-on introduction to the manipulation of optical satellit
 ### See also
 
 * Open source [Satellite Stereo Pipeline (S2P)](https://github.com/MISS3D/s2p)
-* [Automatic 3D Reconstruction from Multi-Date Satellite Images](https://gfacciol.github.io/multi-date-stereo/) (winning solution of the IARPA Multi-View Stereo 3D Mapping Challenge 2016)
+* [Automatic 3D Reconstruction from Multi-Date Satellite Images](https://gfacciol.github.io/multi-date-stereo/) (winning solution of the [IARPA Multi-View Stereo 3D Mapping Challenge 2016](https://www.iarpa.gov/challenges/3dchallenge.html#winners))
 * Master2 MVA course: [Large-scale geospatial data exploitation](https://mvaisat.wp.imt.fr/)
 
 
