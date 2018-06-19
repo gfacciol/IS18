@@ -404,6 +404,31 @@ def utm_from_latlon(lats, lons):
     proj_dst = pyproj.Proj('+proj=utm +zone={}{}'.format(n, l))
     return pyproj.transform(proj_src, proj_dst, lons, lats)
 
+def utm_from_lonlatzs(lon, lat, zonestring):
+    import utm
+    import pyproj
+    proj_src = pyproj.Proj('+proj=latlong')
+    proj_dst = pyproj.Proj('+proj=utm +zone=%s' % zonestring)
+    return pyproj.transform(proj_src, proj_dst, lat, lon)
+
+def zonestring_from_lonlat(lon, lat):
+    import utm
+    n = utm.latlon_to_zone_number(lat, lon)
+    l = utm.latitude_to_zone_letter(lat)
+    s = "%d%s" % (n, l)
+    return s
+
+
+# fast function to convert  to utm
+def lonlat_from_utm(easts, norths, zonestring):
+    import utm
+    import pyproj
+    #n = utm.latlon_to_zone_number(lats[0], lons[0])
+    #l = utm.latitude_to_zone_letter(lats[0])
+    proj_src = pyproj.Proj("+proj=utm +zone=%s" % zonestring)
+    proj_dst = pyproj.Proj('+proj=latlong')
+    return pyproj.transform(proj_src, proj_dst, easts, norths)
+
 
 
 
