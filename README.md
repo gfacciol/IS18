@@ -4,7 +4,7 @@
 
 See https://gfacciol.github.io/IS18/ for details.
 
-Try the notebook here [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/gfacciol/IS18notebook/master?filepath=IS18.ipynb)
+Try the notebook here [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/gfacciol/IS18/master?filepath=IS18.ipynb)
 
 
 ### Technical info
