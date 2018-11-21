@@ -16,7 +16,7 @@ filelock
 matplotlib 
 scipy 
 pyproj 
-pyfftw 
+pyFFTW==0.10.4 
 scikit-image 
 numba 
 pillow 
