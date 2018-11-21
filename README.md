@@ -10,5 +10,5 @@ Try the notebook here [![Binder](https://mybinder.org/badge.svg)](https://mybind
 ### Technical info
 
 * The MyBinder image is build using Docker
-* The notebook dependences are in resources.txt 
+* The notebook dependences are in requirements.txt 
 * This notebook works only with notebook==5.4.1. With newer versions the potree visualization fails to load 
