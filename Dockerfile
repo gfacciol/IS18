@@ -97,7 +97,6 @@ RUN pip3 install notebook==5.4.1 tornado==5.1.1
 
 # compile SRTM
 #RUN cd ${HOME}/srtm4 && make
-RUN pip3 install srtm4
 
 # compile potreeconverter
 RUN cd /home/ && git clone https://github.com/gfacciol/PotreeConverter_PLY_toolchain.git && cd /home/PotreeConverter_PLY_toolchain && git submodule update --init --recursive && CC=gcc-7 CXX=g++-7 make && cp -r /home/PotreeConverter_PLY_toolchain/PotreeConverter/PotreeConverter/resources /home/PotreeConverter_PLY_toolchain/PotreeConverter/build/PotreeConverter/

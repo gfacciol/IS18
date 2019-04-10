@@ -27,4 +27,5 @@ ipywidgets
 ipyleaflet
 setuptools
 rasterio
+srtm4
 
