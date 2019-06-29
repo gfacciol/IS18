@@ -271,7 +271,7 @@ def specklefilter(off, area=25, th=0):
        numpy array with the filtered disparity map, removed points are set to infinity
     '''
     
-    @jit
+    @jit(nopython=True)
     def find(i,idx):     # finds the root of a dsf
         if idx.flat[i] == i:
             return i
@@ -280,10 +280,10 @@ def specklefilter(off, area=25, th=0):
             #idx.flat[i] = ret    // path compression is useles with idx passed by value
             return ret
 
-    @jit 
+    @jit(nopython=True)
     def dsf(D, th=0):    # builds a dsf
         h,w = D.shape[0],D.shape[1]
-        idx = np.zeros([h,w],dtype=int)
+        idx = np.zeros((h,w),dtype=np.int64)
         for j in range(h):
             for i in range(w):
                 idx[j,i] = j*w + i    
@@ -306,7 +306,7 @@ def specklefilter(off, area=25, th=0):
 
         return idx
 
-    @jit
+    @jit(nopython=True)
     def labels(idx):
         h,w=idx.shape[0],idx.shape[1]
         lab = idx*0
@@ -316,11 +316,11 @@ def specklefilter(off, area=25, th=0):
             lab.flat[i] = ind
         return lab
 
-    @jit
+    @jit(nopython=True)
     def areas(lab):
         h,w=lab.shape[0],lab.shape[1]
-        area = np.zeros(lab.shape,dtype=int)
-        LL = np.zeros(lab.shape,dtype=int)
+        area = np.zeros((h,w),dtype=np.int64)
+        LL = np.zeros((h,w),dtype=np.int64)
         for i in range(w*h):
             area.flat[lab.flat[i]] += 1 
         for i in range(w*h):
@@ -364,7 +364,7 @@ def mismatchFiltering(dL,dR, area=50, tau=1):
 
 
 
-#@jit
+#@jit(nopython=True)
 def filterViterbiV(c, lam=8):
     '''
     The function filters the cost volume by computing  
@@ -386,7 +386,7 @@ def filterViterbiV(c, lam=8):
     sh = c.shape
     M = sh[0]
     L = sh[1]
-    S = c.copy().astype(np.float)
+    S = c.copy().astype(np.float64)
     for i in range(1,M): # loop over the nodes
         
         ### YOUR CODE HERE ###
@@ -422,7 +422,7 @@ def sgmfilter(CV, lam=8):
         numpy array containing the filtered costvolume
     '''
     # compile the filterViterbiV function
-    viterbiV = jit(filterViterbiV)
+    viterbiV = jit(filterViterbiV, nopython=True)
 
     S = np.zeros(CV.shape)
     
@@ -444,7 +444,7 @@ def sgmfilter(CV, lam=8):
 
 
 
-@jit
+@jit(nopython=True)
 def VfitMinimum(v):
     ''' 
     interpolates the position of the subpixel minimum 
@@ -494,7 +494,7 @@ def WTA(CV):
 
 
 
-@jit
+@jit(nopython=True)
 def VfitWTA(CV, min_disp, min_cost):
     '''computes the subpixel refined winner takes all of the cost volume CV'''
     sh = CV.shape
