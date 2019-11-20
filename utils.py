@@ -145,14 +145,29 @@ def is_absolute(url):
     return bool(requests.utils.urlparse(url).netloc)
 
 
-def listFD(url, ext=''):
-    page = requests.get(url).text
-    soup = bs4.BeautifulSoup(page, 'html.parser')
-    files = [node.get('href') for node in soup.find_all('a') if node.get('href').endswith(ext)]
 
-    parsed_url = requests.utils.urlparse(url)
-    base = '%s://%s' % (parsed_url.scheme, parsed_url.netloc)
-    return [x if is_absolute(x) else base+x for x in files]
+
+def listFD(url, extension):
+    """
+    Recursive directory listing, like "find . -name "*extension".
+    Args:
+        url (str):  directory url
+        extension (str): file extension to match
+    Returns:
+        list of urls to files
+    """
+    r = requests.get(url)
+    soup = bs4.BeautifulSoup(r.text, 'html.parser')
+    files = [node.get('href') for node in soup.find_all('a') if node.get('href').endswith(extension)]
+    folders = [node.get('href') for node in soup.find_all('a') if node.get('href').endswith('/')]
+
+    files_urls = [f if is_absolute(f) else os.path.join(url, os.path.basename(f)) for f in files]
+    folders_urls = [f if is_absolute(f) else os.path.join(url, os.path.basename(f.rstrip('/'))) for f in folders]
+
+    for u in folders_urls:
+        if not u.endswith(('../', '..')):
+            files_urls += find(u, extension)
+    return files_urls
 
 
 def acquisition_date(geotiff_path):
