@@ -28,4 +28,4 @@ ipyleaflet
 setuptools
 rasterio
 srtm4
-
+llvmlite==0.31.0
