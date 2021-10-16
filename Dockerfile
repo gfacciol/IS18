@@ -1,12 +1,13 @@
 # docker for the MVA course
 
-FROM ubuntu:xenial
+FROM ubuntu:gutsy
 MAINTAINER Gabriele Facciolo <gfacciol@gmail.com>
-RUN apt-get update && apt-get install -y software-properties-common
 RUN apt-add-repository -y ppa:ubuntugis/ppa
 RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
 RUN add-apt-repository -y ppa:deadsnakes/ppa
-RUN apt-get update && apt-get install -y python3.6
+
+#RUN apt-get update && apt-get install -y python3.6
+#RUN apt-get update && apt-get install -y software-properties-common
 
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -64,7 +65,7 @@ RUN chown -R ${NB_UID} ${HOME}
 
 #RUN pip3 install -U pip
 #RUN python3 -m pip install --user --upgrade pip 
-RUN curl https://bootstrap.pypa.io/pip/3.5/get-pip.py -o get-pip.py &&  python3 get-pip.py --force-reinstall
+#RUN curl https://bootstrap.pypa.io/pip/3.5/get-pip.py -o get-pip.py &&  python3 get-pip.py --force-reinstall
 
 
 # install requirements
