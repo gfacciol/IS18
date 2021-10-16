@@ -65,7 +65,7 @@ RUN curl https://bootstrap.pypa.io/pip/3.5/get-pip.py -o get-pip.py &&  python3 
 
 
 # replace requirements line 
-RUN sed -i  's/4.5.3.56/3.4.0.12/g'  ${HOME}/requirements.txt 4.5.3.56
+RUN sed -i  's/4.5.3.56/3.4.0.12/g'  ${HOME}/requirements.txt 
 
 # install requirements
 RUN pip3 install -r ${HOME}/requirements.txt
