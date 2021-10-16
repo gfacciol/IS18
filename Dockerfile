@@ -1,6 +1,6 @@
 # docker for the MVA course
 
-FROM ubuntu:gutsy
+FROM ubuntu:bionic
 MAINTAINER Gabriele Facciolo <gfacciol@gmail.com>
 RUN apt-add-repository -y ppa:ubuntugis/ppa
 RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
