@@ -20,7 +20,7 @@ pyFFTW==0.10.4
 scikit-image 
 numba 
 pillow 
-opencv-contrib-python==4.2.0.32
+opencv-contrib-python==4.5.3.56
 ad
 pandas 
 ipywidgets 
