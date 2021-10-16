@@ -58,7 +58,7 @@ USER root
 RUN chown -R ${NB_UID} ${HOME}
 
 
-RUN pip3 install -U pip
+#RUN pip3 install -U pip
 
 
 # install requirements
