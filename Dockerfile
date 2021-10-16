@@ -59,6 +59,8 @@ RUN chown -R ${NB_UID} ${HOME}
 
 
 #RUN pip3 install -U pip
+RUN python3 -m pip install --user --upgrade pip
+
 
 
 # install requirements
