@@ -2,6 +2,7 @@
 
 FROM ubuntu:xenial
 MAINTAINER Gabriele Facciolo <gfacciol@gmail.com>
+RUN apt-get update && apt-get install -y software-properties-common
 RUN apt-add-repository -y ppa:ubuntugis/ppa
 RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
 
