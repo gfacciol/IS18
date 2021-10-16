@@ -61,7 +61,7 @@ RUN chown -R ${NB_UID} ${HOME}
 
 #RUN pip3 install -U pip
 #RUN python3 -m pip install --user --upgrade pip 
-RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py &&  python3 get-pip.py --force-reinstall
+RUN curl https://bootstrap.pypa.io/pip/3.5/get-pip.py -o get-pip.py &&  python3 get-pip.py --force-reinstall
 
 
 # install requirements
