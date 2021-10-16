@@ -407,17 +407,26 @@ def crop_aoi(geotiff, aoi, z=0):
 
 # fast function to convert lonlat to utm
 def utm_from_lonlat(lons, lats):
-    return utm_from_latlon(lats, lons)
+    return pyproj_lonlat_to_utm(lons, lats)[:2]
+
 
 # fast function to convert latlon to utm
-def utm_from_latlon(lats, lons):
-    import utm
+def pyproj_lonlat_to_utm(lon, lat, epsg=None):
+    if epsg is None:
+        zn = round((183 + np.mean(lon))/6)
+        epsg = int(32700 - round((45 + np.mean(lat)) / 90) * 100 + zn)
+    x, y = pyproj_lonlat_to_epsg(lon, lat, epsg)
+    return x, y, epsg
+
+
+def pyproj_lonlat_to_epsg(lon, lat, epsg):
     import pyproj
-    n = utm.latlon_to_zone_number(lats[0], lons[0])
-    l = utm.latitude_to_zone_letter(lats[0])
-    proj_src = pyproj.Proj('+proj=latlong')
-    proj_dst = pyproj.Proj('+proj=utm +zone={}{}'.format(n, l))
-    return pyproj.transform(proj_src, proj_dst, lons, lats)
+
+    in_proj = pyproj.Proj(init='epsg:4326')
+    out_proj = pyproj.Proj(init='epsg:{}'.format(epsg))
+    return pyproj.transform(in_proj, out_proj, lon, lat)
+
+
 
 def utm_from_lonlatzs(lon, lat, zonestring):
     import utm
