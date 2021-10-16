@@ -1,13 +1,9 @@
 # docker for the MVA course
 
-FROM ubuntu:bionic
+FROM ubuntu:xenial
 MAINTAINER Gabriele Facciolo <gfacciol@gmail.com>
-#RUN apt-add-repository -y ppa:ubuntugis/ppa
-#RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
-#RUN add-apt-repository -y ppa:deadsnakes/ppa
-
-#RUN apt-get update && apt-get install -y python3.6
-#RUN apt-get update && apt-get install -y software-properties-common
+RUN apt-add-repository -y ppa:ubuntugis/ppa
+RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
 
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -65,12 +61,14 @@ RUN chown -R ${NB_UID} ${HOME}
 
 #RUN pip3 install -U pip
 #RUN python3 -m pip install --user --upgrade pip 
-#RUN curl https://bootstrap.pypa.io/pip/3.5/get-pip.py -o get-pip.py &&  python3 get-pip.py --force-reinstall
+RUN curl https://bootstrap.pypa.io/pip/3.5/get-pip.py -o get-pip.py &&  python3 get-pip.py --force-reinstall
 
+
+# replace requirements line 
+RUN sed -i  's/4.5.3.56/3.4.0.12/g'  ${HOME}/requirements.txt 4.5.3.56
 
 # install requirements
 RUN pip3 install -r ${HOME}/requirements.txt
-
 
 
 RUN    jupyter nbextension enable --py --sys-prefix widgetsnbextension && \
