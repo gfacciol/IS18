@@ -2,9 +2,9 @@
 
 FROM ubuntu:bionic
 MAINTAINER Gabriele Facciolo <gfacciol@gmail.com>
-RUN apt-add-repository -y ppa:ubuntugis/ppa
-RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
-RUN add-apt-repository -y ppa:deadsnakes/ppa
+#RUN apt-add-repository -y ppa:ubuntugis/ppa
+#RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
+#RUN add-apt-repository -y ppa:deadsnakes/ppa
 
 #RUN apt-get update && apt-get install -y python3.6
 #RUN apt-get update && apt-get install -y software-properties-common
